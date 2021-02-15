@@ -13,10 +13,12 @@
     "@felte/reporter-cvapi": "^0.1.5",
     "@felte/reporter-dom": "^0.1.4",
     "@felte/reporter-tippy": "^0.1.6",
+    "bueno": "^0.1.5",
     "compression": "^1.7.1",
     "felte": "^0.4.6",
     "mdsvex": "^0.8.9",
     "polka": "next",
+    "ress": "^3.0.0",
     "sirv": "^1.0.0",
     "tippy.js": "^6.2.7"
   },

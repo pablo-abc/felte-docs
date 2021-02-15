@@ -1,50 +1,57 @@
 <script>
-  import successkid from 'images/successkid.jpg';
+  import HomeExample from '../components/HomeExample.svelte';
 </script>
 
+<svelte:head>
+  <title>Felte: A form library for Svelte</title>
+</svelte:head>
+
+<div>
+  <section class=title>
+    <h1>FELTE</h1>
+    <h2>A form library for Svelte with simple validation reporting.</h2>
+  </section>
+  <section class=example>
+    <HomeExample />
+  </section>
+</div>
+
 <style>
-  h1, figure, p {
-    text-align: center;
-    margin: 0 auto;
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  div section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 8rem);
+    margin: 2rem 0;
+  }
+
+  .title {
+    min-width: min(60%, 600px);
   }
 
   h1 {
-    font-size: 2.8em;
+    margin: 0 auto;
+    font-size: 4em;
     text-transform: uppercase;
     font-weight: 700;
+    letter-spacing: 0.1em;
     margin: 0 0 0.5em 0;
   }
 
-  figure {
-    margin: 0 0 1em 0;
-  }
-
-  img {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 0 1em 0;
-  }
-
-  p {
-    margin: 1em auto;
+  h2 {
+    font-weight: 400;
   }
 
   @media (min-width: 480px) {
     h1 {
-      font-size: 4em;
+      font-size: 7em;
     }
   }
 </style>
-
-<svelte:head>
-  <title>Sapper project template</title>
-</svelte:head>
-
-<h1>Great success!</h1>
-
-<figure>
-  <img alt="Success Kid" src="{successkid}">
-  <figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
