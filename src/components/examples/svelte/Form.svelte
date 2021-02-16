@@ -27,23 +27,23 @@
 <form use:form>
   <label>
     <span>Email:</span>
-    <input id="email" name="email" type="email" aria-describedby="email-validation">
+    <input id="email-svelte" name="email" type="email" aria-describedby="email-validation-svelte">
   </label>
-  <ValidationMessage for="email" let:messages={message}>
-    <span id="email-validation" class="validation-message">
+  <ValidationMessage for="email-svelte" let:messages={message}>
+    <span id="email-validation-svelte" class="validation-message">
       {message}
     </span>
-    <span slot="placeholder" id="email-validation" class="validation-message" />
+    <span slot="placeholder" id="email-validation-svelte" class="validation-message" />
   </ValidationMessage>
   <label>
     <span>Password:</span>
-    <input id="password" name="password" type="password" aria-describedby="password-validation">
+    <input id="password-svelte" name="password" type="password" aria-describedby="password-validation-svelte">
   </label>
-  <ValidationMessage for="password" let:messages={message}>
-    <span id="password-validation" class="validation-message">
+  <ValidationMessage for="password-svelte" let:messages={message}>
+    <span id="password-validation-svelte" class="validation-message">
       {message}
     </span>
-    <span slot="placeholder" id="password-validation" class="validation-message" />
+    <span slot="placeholder" id="password-validation-svelte" class="validation-message" />
   </ValidationMessage>
   <button type="submit">Fail to sign in</button>
 </form>

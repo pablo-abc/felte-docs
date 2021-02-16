@@ -27,14 +27,14 @@
 <form use:form>
   <label>
     <span>Email:</span>
-    <input id="email" name="email" type="email" aria-describedby="email-validation">
+    <input id="email-dom" name="email" type="email" aria-describedby="email-validation-dom">
   </label>
-  <div id="email-validation" data-felte-reporter-dom-for="email" aria-live="polite" />
+  <div id="email-validation-dom" data-felte-reporter-dom-for="email-dom" aria-live="polite" />
   <label>
     <span>Password:</span>
-    <input id="password" name="password" type="password" aria-describedby="password-validation">
+    <input id="password-dom" name="password" type="password" aria-describedby="password-validation-dom">
   </label>
-  <div id="password-validation" data-felte-reporter-dom-for="password" aria-live="polite" />
+  <div id="password-validation-dom" data-felte-reporter-dom-for="password-dom" aria-live="polite" />
   <button type="submit">Fail to sign in</button>
 </form>
 
