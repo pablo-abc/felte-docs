@@ -12,7 +12,9 @@
     </a>
   </h1>
   <ul>
-    <li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="https://github.com/pablo-abc/felte">docs</a></li>
+    <!--
+     <li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="docs">docs</a></li>
+     -->
     <li>
       <a
         class=icon-link

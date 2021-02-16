@@ -51,6 +51,7 @@
     border-radius: 10px;
     padding: 0.3em;
     background: var(--on-primary-color);
+    margin-bottom: 1rem;
   }
 
   label, input {

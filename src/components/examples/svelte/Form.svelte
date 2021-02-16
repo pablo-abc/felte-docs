@@ -33,6 +33,7 @@
     <span id="email-validation" class="validation-message">
       {message}
     </span>
+    <span slot="placeholder" id="email-validation" class="validation-message" />
   </ValidationMessage>
   <label>
     <span>Password:</span>
@@ -42,6 +43,7 @@
     <span id="password-validation" class="validation-message">
       {message}
     </span>
+    <span slot="placeholder" id="password-validation" class="validation-message" />
   </ValidationMessage>
   <button type="submit">Fail to sign in</button>
 </form>
