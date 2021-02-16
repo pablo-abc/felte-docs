@@ -2,7 +2,7 @@
   <section class=feat>
     <h2>Validation!</h2>
     <p>
-      Use your favorite validation library (or create your own strategy). As long as the validation messages are in the expected shape Felte expects them, you'll be able to use it.
+      Use your favorite validation library (or create your own strategy). As long as the validation messages are in the shape Felte expects, you'll be able to use it.
     </p>
   </section>
   <section class="feat feat-center">
@@ -14,7 +14,7 @@
   <section class="feat feat-final">
     <h2>Easy styling!</h2>
     <p>
-      No fighting with custom components or CSS variables. Felte works with the default HTML tags, any valid HTML5 is a valid Felte form!
+      No fighting with custom components or CSS variables. Felte works with plain HTML tags. Write your form as you would any HTML5 form!
     </p>
   </section>
 </div>
