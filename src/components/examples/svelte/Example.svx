@@ -39,12 +39,22 @@
       <span>Email:</span>
       <input id="email" name="email" type="email" aria-describedby="email-validation">
     </label>
-    <div id="email-validation" data-felte-reporter-dom-for="email" aria-live="polite" />
+    <ValidationMessage for="email" let:messages={message}>
+      <span id="email-validation" class="validation-message">
+        {message}
+      </span>
+      <span slot="placeholder" id="email-validation" class="validation-message" />
+    </ValidationMessage>
     <label>
       <span>Password:</span>
       <input id="password" name="password" type="password" aria-describedby="password-validation">
     </label>
-    <div id="password-validation" data-felte-reporter-dom-for="password" aria-live="polite" />
+    <ValidationMessage for="password" let:messages={message}>
+      <span id="password-validation" class="validation-message">
+        {message}
+      </span>
+      <span slot="placeholder" id="password-validation" class="validation-message" />
+    </ValidationMessage>
     <button type="submit">Fail to sign in</button>
   </form>
   ```

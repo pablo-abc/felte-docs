@@ -45,12 +45,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: calc(100vh - 10rem);
     margin: 2rem 1rem;
   }
 
   .title {
     min-width: min(60%, 600px);
+  }
+
+  @media (min-width: 971px) {
+    .title {
+      min-height: calc(100vh - 10rem);
+    }
   }
 
   h1 {
