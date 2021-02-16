@@ -37,6 +37,7 @@
     z-index: 99999;
     width: 100%;
     background: rgba(255, 255, 255, 0.6);
+    min-height: 57px;
   }
 
   h1 {
