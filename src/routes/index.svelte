@@ -39,6 +39,7 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    min-height: calc(100vh - 4rem);
   }
 
   .row section {
@@ -50,12 +51,6 @@
 
   .title {
     min-width: min(60%, 600px);
-  }
-
-  @media (min-width: 971px) {
-    .title {
-      min-height: calc(100vh - 10rem);
-    }
   }
 
   h1 {
@@ -71,9 +66,13 @@
     font-weight: 400;
   }
 
-  @media (min-width: 480px) {
+  @media (min-width: 971px) {
     h1 {
       font-size: 7em;
+    }
+
+    .title {
+      min-height: calc(100vh - 10rem);
     }
   }
 </style>
