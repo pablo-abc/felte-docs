@@ -12,8 +12,17 @@
     </a>
   </h1>
   <ul>
-    <li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">docs</a></li>
-    <li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
+    <li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="https://github.com/pablo-abc/felte">docs</a></li>
+    <li>
+      <a
+        class=icon-link
+        rel=noreferrer
+        href="https://github.com/pablo-abc/felte"
+        aria-label="Github Repository"
+        >
+        <img height=25 width=25 src="icons/github-icon.svg" alt="" />
+      </a>
+    </li>
   </ul>
 </nav>
 
@@ -38,6 +47,8 @@
   }
 
   ul {
+    display: flex;
+    align-items: center;
     margin: 0;
     padding: 0 2rem;
   }
@@ -75,5 +86,10 @@
     text-decoration: none;
     padding: 1em 0.5em;
     display: block;
+  }
+
+  .icon-link {
+    margin-top: 0.3rem;
+    padding: 0 0.5em;
   }
 </style>

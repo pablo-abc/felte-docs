@@ -27,9 +27,8 @@
 <form use:form>
   <label>
     <span>Email:</span>
-    <input name="email" type="email" aria-describedby="signin-description">
+    <input name="email" type="email">
   </label>
-  <span id="signin-description">Use any value you want, this is just a demo.</span>
   <label>
     <span>Password:</span>
     <input name="password" type="password">
@@ -52,10 +51,6 @@
     border-radius: 10px;
     padding: 0.3em;
     background: var(--on-primary-color);
-  }
-
-  #signin-description {
-    font-size: 0.7em;
   }
 
   label, input {

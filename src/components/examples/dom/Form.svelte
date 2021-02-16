@@ -1,6 +1,6 @@
 <script>
   import { createForm } from 'felte';
-  import reporter from '@felte/reporter-tippy';
+  import reporter from '@felte/reporter-dom';
   import { checkPerKey, string, not, emptyString, email, enUS, object } from 'bueno';
 
   const { form } = createForm({
@@ -10,7 +10,7 @@
       };
     },
     onError: error => error,
-    reporter,
+    reporter: reporter({ single: true }),
     validate: (values) => {
       return checkPerKey(
         values,
@@ -27,13 +27,14 @@
 <form use:form>
   <label>
     <span>Email:</span>
-    <input name="email" type="email" aria-describedby="signin-description">
+    <input id="email" name="email" type="email" aria-describedby="email-validation">
   </label>
-  <span id="signin-description">Use any value you want, this is just a demo.</span>
+  <div id="email-validation" data-felte-reporter-dom-for="email" aria-live="polite" />
   <label>
     <span>Password:</span>
-    <input name="password" type="password">
+    <input id="password" name="password" type="password" aria-describedby="password-validation">
   </label>
+  <div id="password-validation" data-felte-reporter-dom-for="password" aria-live="polite" />
   <button type="submit">Fail to sign in</button>
 </form>
 
@@ -52,10 +53,6 @@
     border-radius: 10px;
     padding: 0.3em;
     background: var(--on-primary-color);
-  }
-
-  #signin-description {
-    font-size: 0.7em;
   }
 
   label, input {
@@ -85,5 +82,11 @@
 
   button:active {
     transform: scale(0.9);
+  }
+
+  [data-felte-reporter-dom-for] {
+    min-height: 1.5rem;
+    font-size: 1rem;
+    color: red;
   }
 </style>

@@ -1,6 +1,6 @@
 <script>
   import { createForm } from 'felte';
-  import reporter from '@felte/reporter-tippy';
+  import { svelteReporter as reporter, ValidationMessage } from '@felte/reporter-svelte';
   import { checkPerKey, string, not, emptyString, email, enUS, object } from 'bueno';
 
   const { form } = createForm({
@@ -27,13 +27,22 @@
 <form use:form>
   <label>
     <span>Email:</span>
-    <input name="email" type="email" aria-describedby="signin-description">
+    <input id="email" name="email" type="email" aria-describedby="email-validation">
   </label>
-  <span id="signin-description">Use any value you want, this is just a demo.</span>
+  <ValidationMessage for="email" let:messages={message}>
+    <span id="email-validation" class="validation-message">
+      {message}
+    </span>
+  </ValidationMessage>
   <label>
     <span>Password:</span>
-    <input name="password" type="password">
+    <input id="password" name="password" type="password" aria-describedby="password-validation">
   </label>
+  <ValidationMessage for="password" let:messages={message}>
+    <span id="password-validation" class="validation-message">
+      {message}
+    </span>
+  </ValidationMessage>
   <button type="submit">Fail to sign in</button>
 </form>
 
@@ -52,10 +61,6 @@
     border-radius: 10px;
     padding: 0.3em;
     background: var(--on-primary-color);
-  }
-
-  #signin-description {
-    font-size: 0.7em;
   }
 
   label, input {
@@ -85,5 +90,12 @@
 
   button:active {
     transform: scale(0.9);
+  }
+
+  .validation-message {
+    display: block;
+    min-height: 1.5rem;
+    font-size: 1rem;
+    color: red;
   }
 </style>

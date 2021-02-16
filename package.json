@@ -1,5 +1,5 @@
 {
-  "name": "Felte docs",
+  "name": "felte-docs",
   "description": "Documentation site for Felte",
   "private": true,
   "version": "0.0.1",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@felte/reporter-cvapi": "^0.1.5",
-    "@felte/reporter-dom": "^0.1.4",
+    "@felte/reporter-dom": "^0.1.5",
     "@felte/reporter-tippy": "^0.1.6",
     "bueno": "^0.1.5",
     "compression": "^1.7.1",
@@ -28,7 +28,7 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.0.0",
-    "@felte/reporter-svelte": "^0.1.3",
+    "@felte/reporter-svelte": "^0.1.5",
     "@rollup/plugin-babel": "^5.0.0",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",

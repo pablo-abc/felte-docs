@@ -1,5 +1,6 @@
 :root {
   --primary-color: rgb(255, 62, 0);
+  --on-primary-color: #FFFFF9;
   --primary-color-hover: rgb(255, 113, 51);
   --primary-background: #FFFFF0;
 

@@ -1,35 +1,52 @@
 <script>
   import HomeExample from '../components/HomeExample.svelte';
+  import Features from '../components/Features.svelte';
+  import TippyExample from '../components/examples/tippy/Example.svx';
+  import DomExample from '../components/examples/dom/Example.svx';
+  import SvelteExample from '../components/examples/svelte/Example.svx';
 </script>
 
 <svelte:head>
   <title>Felte: A form library for Svelte</title>
 </svelte:head>
 
-<div>
+<div class=row>
   <section class=title>
     <h1>FELTE</h1>
     <h2>A form library for Svelte with simple validation reporting.</h2>
   </section>
-  <section class=example>
+  <section>
     <HomeExample />
   </section>
 </div>
+<div class=row>
+  <Features />
+</div>
+<div class=row>
+  <TippyExample />
+</div>
+<div class=row>
+  <DomExample />
+</div>
+<div class=row>
+  <SvelteExample />
+</div>
 
 <style>
-  div {
+  .row {
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
   }
 
-  div section {
+  .row section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100vh - 8rem);
-    margin: 2rem 0;
+    min-height: calc(100vh - 10rem);
+    margin: 2rem 1rem;
   }
 
   .title {
