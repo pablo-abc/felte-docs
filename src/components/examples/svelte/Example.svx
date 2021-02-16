@@ -61,19 +61,22 @@
   }
 
   pre {
-    max-height: 90vh;
     max-width: 90%;
     margin: 1rem;
   }
 
   @media (min-width: 942px) {
     pre {
+      height: 90vh;
       max-width: 60%;
+    }
+
+    .form {
+      height: 90vh;
     }
   }
 
   .form {
-    height: 90vh;
     margin: 1rem;
   }
 </style>
