@@ -842,10 +842,10 @@
     svelte "^3.0.0"
     svelte-preprocess "^4.6.9"
 
-"@felte/reporter-tippy@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@felte/reporter-tippy/-/reporter-tippy-0.1.6.tgz"
-  integrity sha512-0UvGP1I26SRGsRKQOjOoAAl73RdKdquu9hjt0ougcRZnt2kWsMNjPwyraW6SHgdEHpapBw3h0PceYj8PAsIvGw==
+"@felte/reporter-tippy@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@felte/reporter-tippy/-/reporter-tippy-0.1.7.tgz#f98a5d5af04c546cf13185ceb6b19504174c7116"
+  integrity sha512-ZzyypsUiBQhaFXR4Dph/Ybn87fIl6SuUoIapvWygTXvJlAJZdDZpTzxIkieNqzHAg4ge4YK/qv3q95LV0YRzpg==
   dependencies:
     "@felte/common" "^0.1.4"
 

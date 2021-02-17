@@ -12,7 +12,7 @@
   "dependencies": {
     "@felte/reporter-cvapi": "^0.1.5",
     "@felte/reporter-dom": "^0.1.5",
-    "@felte/reporter-tippy": "^0.1.6",
+    "@felte/reporter-tippy": "^0.1.7",
     "bueno": "^0.1.5",
     "compression": "^1.7.1",
     "felte": "^0.4.6",

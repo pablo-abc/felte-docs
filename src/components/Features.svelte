@@ -24,12 +24,12 @@
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
 
   .feat {
-    max-width: 30%;
+    max-width: min(30%, 500px);
     min-width: 300px;
     min-height: 250px;
     margin: 1rem;
