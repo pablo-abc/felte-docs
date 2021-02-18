@@ -38,7 +38,7 @@
     position: sticky;
     top: 0;
     grid-area: aside;
-    max-height: 100vh;
+    max-height: calc(100vh - 4rem);
     overflow: auto;
   }
 
