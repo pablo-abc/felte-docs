@@ -3,26 +3,28 @@
 </script>
 
 <aside>
-  <ul class=sections>
-    {#each items as item  (item.id)}
-      <li>
-        <a href={`docs#${item.id}`}>
-          {item.section}
-        </a>
-      </li>
-      {#if item.subsections}
-        <ul class=subsections>
-          {#each item.subsections as subsection (subsection.id)}
-            <li>
-              <a href={`docs#${subsection.id}`}>
-                {subsection.name}
-              </a>
-            </li>
-          {/each}
-        </ul>
-      {/if}
-    {/each}
-  </ul>
+  <nav>
+    <ul class=sections>
+      {#each items as item  (item.id)}
+        <li>
+          <a href={`docs#${item.id}`}>
+            {item.section}
+          </a>
+        </li>
+        {#if item.subsections}
+          <ul class=subsections>
+            {#each item.subsections as subsection (subsection.id)}
+              <li>
+                <a href={`docs#${subsection.id}`}>
+                  {subsection.name}
+                </a>
+              </li>
+            {/each}
+          </ul>
+        {/if}
+      {/each}
+    </ul>
+  </nav>
 </aside>
 
 <style>
@@ -32,7 +34,12 @@
   }
 
   aside {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     grid-area: aside;
+    max-height: 100vh;
+    overflow: auto;
   }
 
   .sections, .subsections {
@@ -43,9 +50,7 @@
     margin-left: 1rem;
   }
 
-  .sections {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 1rem;
+  li {
+    padding: 0.2rem;
   }
 </style>
