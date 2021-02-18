@@ -10,8 +10,6 @@
 
 <style>
   pre {
-    border: 2px solid var(--primary-color);
-    border-radius: 10px 30px;
     margin: 1rem 0;
   }
 </style>

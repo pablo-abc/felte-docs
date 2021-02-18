@@ -35,7 +35,7 @@
     opacity: 0;
     position: absolute;
     left: -2rem;
-    display: block;
+    top: 1.5rem;
     transition: opacity 300ms;
   }
 

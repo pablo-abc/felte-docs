@@ -9,10 +9,23 @@ import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
+import hljs from 'highlight.js';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
+
+function highlighter(code, lang) {
+  const highlighted = hljs.highlight(lang, code);
+  const value = highlighted.value;
+  return (
+    '{@html `<pre class="hljs ' +
+    lang +
+    '"><code class="hljs">' +
+    value +
+    '</code></pre>`}'
+  );
+}
 
 const onwarn = (warning, onwarn) =>
   (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
@@ -31,7 +44,13 @@ export default {
       }),
       svelte({
         extensions: ['.svelte', '.svx'],
-        preprocess: [mdsvex()],
+        preprocess: [
+          mdsvex({
+            highlight: {
+              highlighter,
+            },
+          }),
+        ],
         compilerOptions: {
           dev,
           hydratable: true,
@@ -91,7 +110,13 @@ export default {
       }),
       svelte({
         extensions: ['.svelte', '.svx'],
-        preprocess: [mdsvex()],
+        preprocess: [
+          mdsvex({
+            highlight: {
+              highlighter,
+            },
+          }),
+        ],
         compilerOptions: {
           dev,
           generate: 'ssr',

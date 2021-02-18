@@ -58,13 +58,13 @@
     max-width: 100%;
   }
 
-  pre {
+  .example :global(pre) {
     max-width: 90%;
     margin: 1rem;
   }
 
   @media (min-width: 942px) {
-    pre {
+    .example :global(pre) {
       max-width: 60%;
       height: 90vh;
     }
