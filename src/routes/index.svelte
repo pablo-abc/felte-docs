@@ -10,27 +10,29 @@
   <title>Felte: A form library for Svelte</title>
 </svelte:head>
 
-<div class=row>
-  <section class=title>
-    <h1>FELTE</h1>
-    <h2>A form library for Svelte with simple validation reporting.</h2>
-  </section>
-  <section>
-    <HomeExample />
-  </section>
-</div>
-<div class=row>
-  <Features />
-</div>
-<div class=row>
-  <TippyExample />
-</div>
-<div class=row>
-  <DomExample />
-</div>
-<div class=row>
-  <SvelteExample />
-</div>
+<main>
+  <div class=row>
+    <section class=title>
+      <h1>FELTE</h1>
+      <h2>A form library for Svelte with simple validation reporting.</h2>
+    </section>
+    <section>
+      <HomeExample />
+    </section>
+  </div>
+  <div class=row>
+    <Features />
+  </div>
+  <div class=row>
+    <TippyExample />
+  </div>
+  <div class=row>
+    <DomExample />
+  </div>
+  <div class=row>
+    <SvelteExample />
+  </div>
+</main>
 
 <style>
   .row {

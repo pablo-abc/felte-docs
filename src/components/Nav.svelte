@@ -2,42 +2,47 @@
   export let segment;
 </script>
 
-<nav>
-  <h1>
-    <a
-      href="."
-      aria-current="{segment === undefined ? 'page' : undefined}"
-      >
-      felte
-    </a>
-  </h1>
-  <ul>
-    <!--
-     <li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="docs">docs</a></li>
-     -->
-    <li>
+<header>
+  <nav>
+    <h1>
       <a
-        class=icon-link
-        rel=noreferrer
-        href="https://github.com/pablo-abc/felte"
-        aria-label="Github Repository"
+        href="."
+        aria-current="{segment === undefined ? 'page' : undefined}"
         >
-        <img height=25 width=25 src="icons/github-icon.svg" alt="" />
+        felte
       </a>
-    </li>
-  </ul>
-</nav>
+    </h1>
+    <ul>
+      <li><a aria-current="{segment === 'docs' ? 'page' : undefined}" href="docs">docs</a></li>
+      <li>
+        <a
+          class=icon-link
+          rel=noreferrer
+          href="https://github.com/pablo-abc/felte"
+          aria-label="Github Repository"
+          >
+          <img height=25 width=25 src="icons/github-icon.svg" alt="" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
 <style>
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  header {
     border-bottom: 1px solid rgba(255,62,0,0.1);
     z-index: 99999;
     width: 100%;
     background: rgba(255, 255, 255, 0.6);
     min-height: 57px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 95%;
   }
 
   h1 {
