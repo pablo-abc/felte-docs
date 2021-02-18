@@ -12,7 +12,7 @@ The `createForm` function can also accept a validation function. It's a function
 ```javascript
 const { form } = createForm({
   // ...
-  validate (values) => {
+  validate: (values) => {
     const errors = {}
     if (!values.email) errors.email = 'Must be a valid email';
     if (!values.password) errors.password = [
@@ -40,7 +40,7 @@ const schema = yup.object().shape({
 
 const { form } = createForm({
   // ...
-  validate async (values) => {
+  validate: async (values) => {
     try {
       await schema.validate(values);
     } catch (err) {
@@ -80,10 +80,14 @@ const { form } = createForm({
 
 <pre>
   <!-- Prettify the errors and display them in HTML -->
-  {JSON.stringify($errors, null, 2}
+  {JSON.stringify($errors, null, 2)}
 </pre>
 
 <pre>
-  {JSON.stringify($touched, null, 2}
+  {JSON.stringify($touched, null, 2)}
 </pre>
 ```
+
+You can read more above them in the `stores` section.
+
+You don't need to manually handle this errors. Felte provides four official packages to handle your errors for you, either using Tippy, directly mutating the DOM, providing a Svelte component or using the browser's built-in constraint validation API. You can read more about this in the `reporters` section.
