@@ -6,9 +6,11 @@
 </script>
 
 <span>
-  <a name={id} href={`docs#${id}`} aria-hidden=true>
-    <img src="icons/link.svg" alt="" />
-  </a>
+  {#if depth === 2 || depth === 3}
+    <a name={id} href={`docs#${id}`} aria-hidden=true>
+      <img src="icons/link.svg" alt="" />
+    </a>
+  {/if}
   {#if depth === 1}
     <h1><slot></slot></h1>
   {:else if depth === 2}
@@ -53,5 +55,9 @@
 
   h3 {
     font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
   }
 </style>
