@@ -45,6 +45,10 @@
 </div>
 
 <style>
+  .main-container {
+    margin-bottom: 4rem;
+  }
+
   main {
     padding: 1rem;
     margin: 1rem;
@@ -55,7 +59,6 @@
       display: grid;
       grid-template-areas: "aside main";
       grid-template-columns: minmax(300px, 20%) 1fr;
-      margin-bottom: 4rem;
     }
 
     main {

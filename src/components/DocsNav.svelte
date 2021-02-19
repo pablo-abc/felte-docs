@@ -50,6 +50,7 @@
   .sections {
     padding: 0 1rem;
     margin: 0 1rem;
+    font-size: 1.2rem;
   }
   @media (min-width: 942px) {
     .sections {
@@ -66,6 +67,6 @@
   }
 
   li {
-    padding: 0.2rem;
+    padding: 0.3rem;
   }
 </style>

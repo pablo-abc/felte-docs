@@ -98,6 +98,6 @@
 
   .icon-link {
     margin-top: 0.3rem;
-    padding: 0 0.5em;
+    padding: 0 0.8em;
   }
 </style>

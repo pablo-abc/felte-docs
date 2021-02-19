@@ -65,7 +65,7 @@
 
 <div class=mobile-menu>
   {#if open && !isDesktop}
-    <div class=overlay on:click="{() => (open = false)}" />
+    <div class=overlay on:click="{() => (open = false)}" transition:fade />
     <aside bind:this={asideElement} transition:menuTransition>
       <div class=actions>
         <button
@@ -147,10 +147,10 @@
     display: grid;
     place-items: center;
     background: var(--primary-color);
-    height: 44px;
-    width: 44px;
-    left: 1rem;
-    bottom: 1rem;
+    height: 56px;
+    width: 56px;
+    left: 2rem;
+    bottom: 2rem;
     transition: background 100ms;
     border-radius: 50%;
   }
@@ -165,7 +165,7 @@
   }
 
   .menu-button svg {
-    width: 30px;
+    width: 36px;
   }
 
   .close-button {
