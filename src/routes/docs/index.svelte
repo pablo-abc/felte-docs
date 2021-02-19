@@ -15,10 +15,12 @@
   import Heading from '../../components/renderers/Heading.svelte';
   import Code from '../../components/renderers/Code.svelte';
   import DocsAside from '../../components/DocsAside.svelte';
+  import Link from '../../components/renderers/Link.svelte';
 
   const renderers = {
     heading: Heading,
     code: Code,
+    link: Link,
   };
   export let data;
 
@@ -43,24 +45,22 @@
 </div>
 
 <style>
-  .main-container {
-    display: grid;
-    grid-template-areas: "aside main";
-    grid-template-columns: minmax(200px, 20%) 1fr;
-  }
-
   main {
     padding: 1rem;
     margin: 1rem;
   }
 
-  main {
-    grid-area: main;
-  }
-
   @media (min-width: 942px) {
+    .main-container {
+      display: grid;
+      grid-template-areas: "aside main";
+      grid-template-columns: minmax(300px, 20%) 1fr;
+      margin-bottom: 4rem;
+    }
+
     main {
       width: min(80%, 1200px);
+      grid-area: main;
     }
   }
 </style>

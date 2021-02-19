@@ -1,56 +1,139 @@
 <script>
+  import { cubicIn } from 'svelte/easing';
+  import { fade } from 'svelte/transition';
+  import DocsNav from './DocsNav.svelte';
+
   export let items = []
+  let open = false;
+
+  function menuTransition() {
+    return {
+      duration: 300,
+      css: (t, u) => `
+        transform: translateX(-${cubicIn(u) * 300}px);
+        opacity: ${t};
+      `,
+    };
+  }
 </script>
 
-<aside>
-  <nav>
-    <ul class=sections>
-      {#each items as item  (item.id)}
-        <li>
-          <a href={`docs#${item.id}`}>
-            {item.section}
-          </a>
-        </li>
-        {#if item.subsections}
-          <ul class=subsections>
-            {#each item.subsections as subsection (subsection.id)}
-              <li>
-                <a href={`docs#${subsection.id}`}>
-                  {subsection.name}
-                </a>
-              </li>
-            {/each}
-          </ul>
-        {/if}
-      {/each}
-    </ul>
-  </nav>
-</aside>
+<div class=desktop-menu>
+  <aside>
+    <DocsNav {items} />
+  </aside>
+</div>
+
+<div class=mobile-menu>
+  {#if open}
+    <aside transition:menuTransition>
+      <div class=actions>
+        <button
+          class=close-button
+          on:click="{() => (open = false)}"
+          aria-label="Close side menu"
+          >
+          <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <DocsNav on:close="{() => (open = false)}" {items} />
+    </aside>
+  {:else}
+    <div class=menu-button transition:fade="{{ duration: 200 }}">
+      <button
+        on:click="{() => (open = true)}"
+        class=menu-button
+        aria-label="Open side menu"
+        >
+        <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  {/if}
+</div>
 
 <style>
-  .sections {
+  .desktop-menu {
+    display: none;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
     padding: 1rem;
-    margin: 1rem;
   }
 
   aside {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
-    grid-area: aside;
-    max-height: calc(100vh - 4rem);
+    background: var(--primary-background);
     overflow: auto;
+    max-height: 100vh;
+    box-shadow:
+      0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+      0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12)
+    ;
   }
 
-  .sections, .subsections {
-    list-style-type: none;
+  @media (min-width: 942px) {
+    .desktop-menu {
+      display: block;
+      grid-area: aside;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    aside {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      min-height: 0;
+      max-height: calc(100vh - 4rem);
+      box-shadow: none;
+    }
   }
 
-  .subsections {
-    margin-left: 1rem;
+  .menu-button {
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background: var(--primary-color);
+    height: 44px;
+    width: 44px;
+    left: 1rem;
+    bottom: 1rem;
+    transition: background 100ms;
+    border-radius: 50%;
   }
 
-  li {
-    padding: 0.2rem;
+  .menu-button:hover {
+    background: var(--primary-color-hover);
+  }
+
+  .menu-button button {
+    background: transparent;
+    color: var(--on-primary-color);
+  }
+
+  .menu-button svg {
+    width: 30px;
+  }
+
+  .close-button {
+    height: 44px;
+    width: 44px;
+    transition: color 100ms;
+  }
+
+  .close-button:hover {
+    color: var(--primary-font-color-hover);
   }
 </style>
