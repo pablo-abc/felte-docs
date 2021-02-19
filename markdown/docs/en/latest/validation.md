@@ -75,6 +75,8 @@ const { form } = createForm({
 
 ```html
 <script>
+  import { createForm } from 'felte';
+
   const { form, errors, touched } = createForm({ \*...*\ });
 </script>
 
@@ -88,6 +90,6 @@ const { form } = createForm({
 </pre>
 ```
 
-You can read more above them in the `stores` section.
+You can read more above them in the [stores](docs#stores) section.
 
-You don't need to manually handle this errors. Felte provides four official packages to handle your errors for you, either using Tippy, directly mutating the DOM, providing a Svelte component or using the browser's built-in constraint validation API. You can read more about this in the `reporters` section.
+You don't need to manually handle this errors. Felte provides four official packages to handle your errors for you, either using Tippy, directly mutating the DOM, providing a Svelte component or using the browser's built-in constraint validation API. You can read more about this in the [reporters](docs#reporters) section.
