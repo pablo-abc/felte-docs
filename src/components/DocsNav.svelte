@@ -54,7 +54,6 @@
   @media (min-width: 942px) {
     .sections {
       padding: 1rem;
-      margin: 1rem;
     }
   }
 

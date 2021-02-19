@@ -109,9 +109,9 @@
   aside {
     position: fixed;
     top: 0;
+    bottom: 0;
     background: var(--primary-background);
     overflow: auto;
-    max-height: 100vh;
     box-shadow:
       0 2.8px 2.2px rgba(0, 0, 0, 0.034),
       0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -135,7 +135,7 @@
     aside {
       position: -webkit-sticky;
       position: sticky;
-      top: 0;
+      top: 2rem;
       min-height: 0;
       max-height: calc(100vh - 4rem);
       box-shadow: none;
