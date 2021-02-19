@@ -1823,10 +1823,10 @@ supports-color@^7.0.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-markdown@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/svelte-markdown/-/svelte-markdown-0.1.1.tgz#5ceecc6ce68af36c871f2d44e839382ec9c740e8"
-  integrity sha512-ymeGiJmayV86/8V4mOtCVmm0nGxsI9HkEJMLfW6chQoN4Jvz+8CQj6LegZkbN/2HR4SlQzpvsnw9r04E+SO+kg==
+svelte-markdown@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/svelte-markdown/-/svelte-markdown-0.1.2.tgz#b7b50fc712e663a6102bade824d6a823013a0992"
+  integrity sha512-OweswEUt9hAW5eQ6ch9z0catKgGw/fsLYt+It/JVpQrQXWkfvu48Io63JOBxW5oAK2qjhyd4MYM5z+p9xjAqiw==
   dependencies:
     marked "^2.0.0"
 
