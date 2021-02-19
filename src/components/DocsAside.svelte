@@ -153,6 +153,10 @@
     bottom: 2rem;
     transition: background 100ms;
     border-radius: 50%;
+    box-shadow:
+      0 2.8px 6.2px rgba(77, 64, 43, 0.064),
+      0 6.7px 8.3px rgba(0, 0, 0, 0.098)
+    ;
   }
 
   .menu-button:hover {
