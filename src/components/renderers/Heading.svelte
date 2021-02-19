@@ -31,13 +31,14 @@
 <style>
   span {
     position: relative;
+    display: flex;
+    align-items: center;
   }
 
   a {
     opacity: 0;
     position: absolute;
     left: -2rem;
-    top: 1.5rem;
     transition: opacity 300ms;
   }
 
