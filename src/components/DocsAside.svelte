@@ -1,10 +1,29 @@
 <script>
+  import { onDestroy } from 'svelte';
   import { cubicIn } from 'svelte/easing';
   import { fade } from 'svelte/transition';
   import DocsNav from './DocsNav.svelte';
+  import {
+    disableBodyScroll,
+    clearAllBodyScrollLocks,
+  } from 'body-scroll-lock';
+  import focusLock from 'dom-focus-lock';
 
   export let items = []
   let open = false;
+  let asideElement;
+
+  $: {
+    if (process.browser && asideElement) {
+      if (open) {
+        disableBodyScroll(asideElement);
+        focusLock.on(asideElement);
+      } else {
+        clearAllBodyScrollLocks();
+        focusLock.off(asideElement);
+      }
+    }
+  }
 
   function menuTransition() {
     return {
@@ -15,6 +34,10 @@
       `,
     };
   }
+
+  onDestroy(() => {
+    clearAllBodyScrollLocks();
+  });
 </script>
 
 <div class=desktop-menu>
@@ -25,7 +48,8 @@
 
 <div class=mobile-menu>
   {#if open}
-    <aside transition:menuTransition>
+    <div class=overlay on:click="{() => (open = false)}" />
+    <aside bind:this={asideElement} transition:menuTransition>
       <div class=actions>
         <button
           class=close-button
@@ -135,5 +159,15 @@
 
   .close-button:hover {
     color: var(--primary-font-color-hover);
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
   }
 </style>

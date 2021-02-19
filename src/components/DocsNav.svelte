@@ -48,7 +48,7 @@
 
 <style>
   .sections {
-    padding: 1rem;
+    padding: 0 1rem;
     margin: 0 1rem;
   }
   @media (min-width: 942px) {
