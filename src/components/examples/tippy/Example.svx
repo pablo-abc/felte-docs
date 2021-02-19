@@ -61,6 +61,8 @@
   .example :global(pre) {
     max-width: 90%;
     margin: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px 30px;
   }
 
   @media (min-width: 942px) {
