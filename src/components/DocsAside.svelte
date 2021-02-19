@@ -1,5 +1,5 @@
 <script>
-  import { onDestroy } from 'svelte';
+  import { onDestroy, onMount } from 'svelte';
   import { cubicIn } from 'svelte/easing';
   import { fade } from 'svelte/transition';
   import DocsNav from './DocsNav.svelte';
@@ -12,6 +12,8 @@
   export let items = []
   let open = false;
   let asideElement;
+  let mqList;
+  let isDesktop;
 
   $: {
     if (process.browser && asideElement) {
@@ -19,6 +21,10 @@
         disableBodyScroll(asideElement);
         focusLock.on(asideElement);
       } else {
+        clearAllBodyScrollLocks();
+        focusLock.off(asideElement);
+      }
+      if (isDesktop) {
         clearAllBodyScrollLocks();
         focusLock.off(asideElement);
       }
@@ -35,8 +41,19 @@
     };
   }
 
+  function watchMedia(e) {
+    isDesktop = e.matches;
+  }
+
+  onMount(() => {
+    mqList = matchMedia('(min-width: 942px)');
+    isDesktop = mqList.matches;
+    mqList.addEventListener('change', watchMedia);
+  });
+
   onDestroy(() => {
     clearAllBodyScrollLocks();
+    mqList?.removeEventListener('change', watchMedia);
   });
 </script>
 
@@ -47,7 +64,7 @@
 </div>
 
 <div class=mobile-menu>
-  {#if open}
+  {#if open && !isDesktop}
     <div class=overlay on:click="{() => (open = false)}" />
     <aside bind:this={asideElement} transition:menuTransition>
       <div class=actions>
