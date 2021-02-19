@@ -49,7 +49,7 @@
   }
 
   onMount(() => {
-    mqList = matchMedia('(min-width: 942px)');
+    mqList = matchMedia('(min-width: 966px)');
     isDesktop = mqList.matches;
     mqList.addEventListener('change', watchMedia);
   });
@@ -127,7 +127,7 @@
     ;
   }
 
-  @media (min-width: 942px) {
+  @media (min-width: 966px) {
     .desktop-menu {
       display: block;
       grid-area: aside;

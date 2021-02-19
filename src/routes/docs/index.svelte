@@ -50,11 +50,10 @@
   }
 
   main {
-    padding: 1rem;
-    margin: 1rem;
+    padding: 2rem;
   }
 
-  @media (min-width: 942px) {
+  @media (min-width: 966px) {
     .main-container {
       display: grid;
       grid-template-areas: "aside main";
@@ -62,8 +61,9 @@
     }
 
     main {
-      width: min(80%, 1200px);
+      width: min(75%, 1200px);
       grid-area: main;
+      padding: 2rem;
     }
   }
 </style>

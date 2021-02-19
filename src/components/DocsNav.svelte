@@ -52,7 +52,7 @@
     margin: 0 1rem;
     font-size: 1.2rem;
   }
-  @media (min-width: 942px) {
+  @media (min-width: 966px) {
     .sections {
       padding: 1rem;
     }
