@@ -42,7 +42,7 @@
     "rollup-plugin-terser": "^7.0.0",
     "sapper": "^0.28.0",
     "svelte": "^3.17.3",
-    "svelte-markdown": "^0.1.1"
+    "svelte-markdown": "^0.1.2"
   },
   "volta": {
     "node": "14.15.5",
