@@ -8,25 +8,28 @@
     clearAllBodyScrollLocks,
   } from 'body-scroll-lock';
   import focusLock from 'dom-focus-lock';
+  import Portal from 'svelte-portal';
+  import { hideOthers } from 'aria-hidden';
 
   export let items = []
   let open = false;
   let asideElement;
   let mqList;
   let isDesktop;
+  let undo = [];
 
+  $: console.log(undo);
   $: {
     if (process.browser && asideElement) {
-      if (open) {
+      if (open && !isDesktop) {
         disableBodyScroll(asideElement);
         focusLock.on(asideElement);
+        undo = [...undo, hideOthers(asideElement)];
       } else {
         clearAllBodyScrollLocks();
         focusLock.off(asideElement);
-      }
-      if (isDesktop) {
-        clearAllBodyScrollLocks();
-        focusLock.off(asideElement);
+        undo.map(undo => undo());
+        undo = [];
       }
     }
   }
@@ -65,21 +68,23 @@
 
 <div class=mobile-menu>
   {#if open && !isDesktop}
-    <div class=overlay on:click="{() => (open = false)}" transition:fade />
-    <aside bind:this={asideElement} transition:menuTransition>
-      <div class=actions>
-        <button
-          class=close-button
-          on:click="{() => (open = false)}"
-          aria-label="Close side menu"
-          >
-          <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      <DocsNav on:close="{() => (open = false)}" {items} />
-    </aside>
+    <Portal>
+      <div class=overlay on:click="{() => (open = false)}" transition:fade />
+      <aside bind:this={asideElement} transition:menuTransition>
+        <div class=actions>
+          <button
+            class=close-button
+            on:click="{() => (open = false)}"
+            aria-label="Close side menu"
+            >
+            <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <DocsNav on:close="{() => (open = false)}" {items} />
+      </aside>
+    </Portal>
   {:else}
     <div class=menu-button transition:fade="{{ duration: 200 }}">
       <button
