@@ -50,7 +50,7 @@
   }
 
   main {
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 
   @media (min-width: 966px) {
