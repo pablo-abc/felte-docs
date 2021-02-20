@@ -16,6 +16,7 @@
   import Code from '../../components/renderers/Code.svelte';
   import DocsAside from '../../components/DocsAside.svelte';
   import Link from '../../components/renderers/Link.svelte';
+  import Head from '../../components/Head.svelte';
 
   const renderers = {
     heading: Heading,
@@ -33,9 +34,7 @@
   let content = data.map(section => section.body).join('\n\n');
 </script>
 
-<svelte:head>
-  <title>Felte | Documentation</title>
-</svelte:head>
+<Head section="Documentation" />
 
 <div class=main-container>
   <main>

@@ -4,11 +4,10 @@
   import TippyExample from '../components/examples/tippy/Example.svx';
   import DomExample from '../components/examples/dom/Example.svx';
   import SvelteExample from '../components/examples/svelte/Example.svx';
+  import Head from '../components/Head.svelte';
 </script>
 
-<svelte:head>
-  <title>Felte: A form library for Svelte</title>
-</svelte:head>
+<Head section="Home" />
 
 <main>
   <div class=row>

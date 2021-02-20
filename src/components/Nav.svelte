@@ -9,7 +9,7 @@
         href="."
         aria-current="{segment === undefined ? 'page' : undefined}"
         >
-        <span class="sr-only">Felte</span>
+        <span class="sr-only">Felte Home</span>
         <img src="felte-logo.svg" width="98" height="53" alt="">
       </a>
     </h1>
@@ -41,7 +41,7 @@
   }
 
   header {
-    border-bottom: 1px solid rgba(255,62,0,0.1);
+    border-bottom: 1px solid rgba(255, 62, 0, 0.1);
     z-index: 99999;
     width: 100%;
     background: rgba(255, 255, 255, 0.6);
