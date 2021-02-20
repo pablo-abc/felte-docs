@@ -4,7 +4,7 @@ section: Getting started
 
 ## Getting started
 
-To start you will only need to install Felte from npm.
+Felte is a JavaScript library that tries to help you ease the management of forms, form validation and the reporting of validation errors. To use its basic functionalities you'll only need the base `felte` package from npm.
 
 ```sh
 npm i -S felte
@@ -14,7 +14,7 @@ npm i -S felte
 yarn add felte
 ```
 
-Then in any svelte component, import the `createForm` function and call it with an `onSubmit` action. The `createForm` returns an action that you can use in any form. This is all you need to make your form reactive.
+Then, inside of the Svelte component where you have your form, import the `createForm` function and call it with an `onSubmit` action. The `createForm` function returns an action that you can use in any form. This is all you need to make your form reactive.
 
 ```html
 <script>
@@ -34,6 +34,6 @@ Then in any svelte component, import the `createForm` function and call it with 
 </form>
 ```
 
-In order for Felte to be aware of your inputs, make sure to assign a **name** to them.
+Felte does not export any components for `Form` of `Field` or anything like that, but you need to make felte aware of your inputs by assigning a **name** to them.
 
 Felte also offers valildation handling and error reporting but this is all you need for the most basic, validation-less form.
