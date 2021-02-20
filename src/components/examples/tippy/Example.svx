@@ -65,14 +65,15 @@
     border-radius: 10px 30px;
   }
 
-  @media (min-width: 942px) {
+  @media (min-width: 966px) {
     .example :global(pre) {
       max-width: 60%;
-      height: 90vh;
+      height: 100%;
+      max-height: 95vh
     }
 
     .form {
-      height: 90vh;
+      height: 100%;
     }
   }
 
