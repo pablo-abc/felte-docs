@@ -9,7 +9,8 @@
         href="."
         aria-current="{segment === undefined ? 'page' : undefined}"
         >
-        felte
+        <span class="sr-only">Felte</span>
+        <img src="felte-logo.svg" width="98" height="53" alt="">
       </a>
     </h1>
     <ul>
@@ -29,6 +30,16 @@
 </header>
 
 <style>
+  .sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
   header {
     border-bottom: 1px solid rgba(255,62,0,0.1);
     z-index: 99999;
@@ -52,6 +63,10 @@
 
   h1 a {
     padding: 0;
+  }
+
+  h1 a img {
+    height: 3.3rem;
   }
 
   ul {
