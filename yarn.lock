@@ -832,10 +832,10 @@
   dependencies:
     "@felte/common" "^0.1.4"
 
-"@felte/reporter-svelte@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.npmjs.org/@felte/reporter-svelte/-/reporter-svelte-0.1.6.tgz"
-  integrity sha512-f/PAlzJUz/AdLK/zBSPN3kBnPkxvv+gYnTG6Unkzdzu8wK2LeuTTDQJUHEsbx10DjMpFpFJiGgLRSCA9MQjpyQ==
+"@felte/reporter-svelte@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@felte/reporter-svelte/-/reporter-svelte-0.1.7.tgz#87e8fbcb165499d3eedd948fdc16ebae8519892b"
+  integrity sha512-/YCmENToeo3WIfQb4bIhmRxkzmBjrpdAfGv8qtOvB8acs49XJK+d/mVMtF3FNJORCio/Dpzx/gLI3K8R1riDpg==
   dependencies:
     "@felte/common" "^0.1.4"
     rollup-plugin-svelte "^7.1.0"
