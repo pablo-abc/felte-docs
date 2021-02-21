@@ -1,7 +1,7 @@
 ---
 section: Validation
 subsections:
-  - Submit errors
+  - Server errors
   - Error handling
 ---
 
@@ -55,7 +55,7 @@ This is also to show that `validate` can handle async functions as well!
 
 Felte will validate whichever field it considers as `touched` as you fill the form, and it will validate all fields (and set them as `touched`) when submitting it.
 
-### Submit errors
+### Server errors
 
 You can add an `onError` function to the `createForm` that will be called if the `onSubmit` function throws an error. It will be called with the value thrown from the `onSubmit` function. You can use the `onError` function to shape your server errors into the same shape that the `validate` function expect and return them from the same function for them to be handled.
 
