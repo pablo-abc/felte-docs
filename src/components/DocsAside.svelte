@@ -3,36 +3,15 @@
   import { cubicIn } from 'svelte/easing';
   import { fade } from 'svelte/transition';
   import DocsNav from './DocsNav.svelte';
-  import {
-    disableBodyScroll,
-    clearAllBodyScrollLocks,
-  } from 'body-scroll-lock';
-  import focusLock from 'dom-focus-lock';
-  import Portal from 'svelte-portal';
-  import { hideOthers } from 'aria-hidden';
+  import { portal } from 'svelte-portal';
+  import { useFocusOn } from 'svelte-focus-on';
+
+  const focusOn = useFocusOn();
 
   export let items = []
   let open = false;
-  let asideElement;
   let mqList;
   let isDesktop;
-  let undo = [];
-
-  $: console.log(undo);
-  $: {
-    if (process.browser && asideElement) {
-      if (open && !isDesktop) {
-        disableBodyScroll(asideElement);
-        focusLock.on(asideElement);
-        undo = [...undo, hideOthers(asideElement)];
-      } else {
-        clearAllBodyScrollLocks();
-        focusLock.off(asideElement);
-        undo.map(undo => undo());
-        undo = [];
-      }
-    }
-  }
 
   function menuTransition() {
     return {
@@ -55,7 +34,6 @@
   });
 
   onDestroy(() => {
-    clearAllBodyScrollLocks();
     mqList?.removeEventListener('change', watchMedia);
   });
 </script>
@@ -68,9 +46,8 @@
 
 <div class=mobile-menu>
   {#if open && !isDesktop}
-    <Portal>
-      <div class=overlay on:click="{() => (open = false)}" transition:fade />
-      <aside bind:this={asideElement} transition:menuTransition>
+    <div use:focusOn use:portal class=overlay on:click="{() => (open = false)}" transition:fade >
+      <aside transition:menuTransition>
         <div class=actions>
           <button
             class=close-button
@@ -84,7 +61,7 @@
         </div>
         <DocsNav on:close="{() => (open = false)}" {items} />
       </aside>
-    </Portal>
+    </div>
   {:else}
     <div class=menu-button transition:fade="{{ duration: 200 }}">
       <button
