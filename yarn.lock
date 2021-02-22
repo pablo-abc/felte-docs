@@ -1856,10 +1856,10 @@ svelte-focus-on@^0.1.3:
     body-scroll-lock "^3.1.5"
     dom-focus-lock "^1.0.4"
 
-svelte-markdown@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/svelte-markdown/-/svelte-markdown-0.1.2.tgz#b7b50fc712e663a6102bade824d6a823013a0992"
-  integrity sha512-OweswEUt9hAW5eQ6ch9z0catKgGw/fsLYt+It/JVpQrQXWkfvu48Io63JOBxW5oAK2qjhyd4MYM5z+p9xjAqiw==
+svelte-markdown@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/svelte-markdown/-/svelte-markdown-0.1.4.tgz#03bec6dcd8ff1c09126e7c62c8a5a481905881d7"
+  integrity sha512-PXr3R/EJ5cPpk/DZoLXG5dOsRoXqHO541KcH340UQojU5MdnFvfgGSif00WjAApuV1RpdkjujhzJ1Gy54r+5pg==
   dependencies:
     marked "^2.0.0"
 
