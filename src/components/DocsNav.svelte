@@ -48,13 +48,12 @@
 
 <style>
   .sections {
-    padding: 0 1rem;
-    margin: 0 1rem;
+    padding: 0;
     font-size: 1.2rem;
   }
   @media (min-width: 966px) {
     .sections {
-      padding: 1rem;
+      padding: 1rem 0;
     }
   }
 
@@ -62,11 +61,19 @@
     list-style-type: none;
   }
 
-  .subsections {
-    margin-left: 1rem;
+  .subsections a {
+    padding-left: 3rem;
   }
 
-  li {
-    padding: 0.3rem;
+  a {
+    display: inline-block;
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  a:hover {
+    background: #f0f0e0;
   }
 </style>

@@ -39,15 +39,15 @@
 </script>
 
 <div class=desktop-menu>
-  <aside>
+  <div class=sidebar>
     <DocsNav {items} />
-  </aside>
+  </div>
 </div>
 
 <div class=mobile-menu>
   {#if open && !isDesktop}
     <div use:focusOn use:portal class=overlay on:click="{() => (open = false)}" transition:fade >
-      <aside transition:menuTransition>
+      <div class=sidebar transition:menuTransition>
         <div class=actions>
           <button
             class=close-button
@@ -60,7 +60,7 @@
           </button>
         </div>
         <DocsNav on:close="{() => (open = false)}" {items} />
-      </aside>
+      </div>
     </div>
   {:else}
     <div class=menu-button transition:fade="{{ duration: 200 }}">
@@ -88,7 +88,7 @@
     padding: 1rem;
   }
 
-  aside {
+  .sidebar {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -114,7 +114,7 @@
       display: none;
     }
 
-    aside {
+    .sidebar {
       position: -webkit-sticky;
       position: sticky;
       top: 2rem;
