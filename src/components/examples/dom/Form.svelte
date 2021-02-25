@@ -47,14 +47,6 @@
     border-radius: 10px 30px;
   }
 
-  input {
-    font-size: 1em;
-    border: 1px solid #aaa;
-    border-radius: 10px;
-    padding: 0.3em;
-    background: var(--on-primary-color);
-  }
-
   label, input {
     display: block;
   }
