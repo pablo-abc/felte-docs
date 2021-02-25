@@ -825,27 +825,27 @@
   dependencies:
     "@felte/common" "^0.1.4"
 
-"@felte/reporter-dom@^0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@felte/reporter-dom/-/reporter-dom-0.1.5.tgz"
-  integrity sha512-/OvOGRB7yLb9Ujd4sd/A5sZAYg0uFVywqY4JI6DaxQ60EcnYikIvbG7hWdCwJ3dm0oWou7JflTBJa4wXzqVM8g==
+"@felte/reporter-dom@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@felte/reporter-dom/-/reporter-dom-0.1.6.tgz#356945721c4cd4eceb2da3e9d2ea8c0fda6741c5"
+  integrity sha512-+Fk3UComgn9akLlzvbUzScE5DjO5LhHuWeDKANHBvk7BdQ8Fr9bRDVduW0tg2vvHPeSnN7QNtQCmcxmakdPF8g==
   dependencies:
     "@felte/common" "^0.1.4"
 
-"@felte/reporter-svelte@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@felte/reporter-svelte/-/reporter-svelte-0.1.7.tgz#87e8fbcb165499d3eedd948fdc16ebae8519892b"
-  integrity sha512-/YCmENToeo3WIfQb4bIhmRxkzmBjrpdAfGv8qtOvB8acs49XJK+d/mVMtF3FNJORCio/Dpzx/gLI3K8R1riDpg==
+"@felte/reporter-svelte@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@felte/reporter-svelte/-/reporter-svelte-0.1.8.tgz#89757f6a2397412225394ca211f2936cc42dbb9d"
+  integrity sha512-yN6LCR+28lWbgJq4HydG3zojaRftfvgUDV7xWdt/pzoCEzA1lVBE+uMzAu3FQkSJEwrU7DOjT2t6AFF2Id/5cQ==
   dependencies:
     "@felte/common" "^0.1.4"
     rollup-plugin-svelte "^7.1.0"
     svelte "^3.0.0"
     svelte-preprocess "^4.6.9"
 
-"@felte/reporter-tippy@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@felte/reporter-tippy/-/reporter-tippy-0.1.7.tgz"
-  integrity sha512-ZzyypsUiBQhaFXR4Dph/Ybn87fIl6SuUoIapvWygTXvJlAJZdDZpTzxIkieNqzHAg4ge4YK/qv3q95LV0YRzpg==
+"@felte/reporter-tippy@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@felte/reporter-tippy/-/reporter-tippy-0.1.8.tgz#5e0956859b2cce2448a38167fa4419f5ec1669a7"
+  integrity sha512-rwhTCVoHqOtlNF2+36HU7P7tPWDBw7EcwaOUHD4ODvWKzc68NH1FyJQgsM7d+Phot7Ywzo7+CIUJnp5o9VdgjQ==
   dependencies:
     "@felte/common" "^0.1.4"
 
@@ -1687,11 +1687,6 @@ resolve@^1.17.0, resolve@^1.19.0:
   dependencies:
     is-core-module "^2.2.0"
     path-parse "^1.0.6"
-
-ress@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/ress/-/ress-3.0.0.tgz"
-  integrity sha512-MTPto7t44AawqmSbEmvMKoSMWPnxjaTuHf94s7RjWxuSGFN0o8/b+6yOwkaC50+Vihjsu6ODUEQR397gTMn57w==
 
 rollup-plugin-svelte@^7.0.0, rollup-plugin-svelte@^7.1.0:
   version "7.1.0"
