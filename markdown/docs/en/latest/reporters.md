@@ -144,7 +144,7 @@ In order to show the errors for a field, you'll need to add a container for each
 <div id="email-validation" data-felte-reporter-dom-for="email" aria-live="polite" />
 ```
 
-You can choose individually if you want to show errors as a `span` or a list wit the attributes `data-felte-reporter-dom-as-single` and `data-felte-reporter-dom-as-list` respectively.
+You can choose individually if you want to show errors as a `span` or a list with the attributes `data-felte-reporter-dom-as-single` and `data-felte-reporter-dom-as-list` respectively.
 
 
 #### Styling
