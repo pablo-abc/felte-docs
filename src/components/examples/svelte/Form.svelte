@@ -30,7 +30,7 @@
     <input id="email-svelte" name="email" type="email" aria-describedby="email-validation-svelte">
   </label>
   <ValidationMessage for="email-svelte" let:messages={message}>
-    <span id="email-validation-svelte" class="validation-message">
+    <span id="email-validation-svelte" class="validation-message" aria-live="polite">
       {message}
     </span>
     <span slot="placeholder" id="email-validation-svelte" class="validation-message" />
@@ -40,7 +40,7 @@
     <input id="password-svelte" name="password" type="password" aria-describedby="password-validation-svelte">
   </label>
   <ValidationMessage for="password-svelte" let:messages={message}>
-    <span id="password-validation-svelte" class="validation-message">
+    <span id="password-validation-svelte" class="validation-message" aria-live="polite">
       {message}
     </span>
     <span slot="placeholder" id="password-validation-svelte" class="validation-message" />

@@ -40,7 +40,7 @@
       <input id="email" name="email" type="email" aria-describedby="email-validation">
     </label>
     <ValidationMessage for="email" let:messages={message}>
-      <span id="email-validation" class="validation-message">
+      <span id="email-validation" class="validation-message" aria-live="polite">
         {message}
       </span>
       <span slot="placeholder" id="email-validation" class="validation-message" />
@@ -50,7 +50,7 @@
       <input id="password" name="password" type="password" aria-describedby="password-validation">
     </label>
     <ValidationMessage for="password" let:messages={message}>
-      <span id="password-validation" class="validation-message">
+      <span id="password-validation" class="validation-message" aria-live="polite">
         {message}
       </span>
       <span slot="placeholder" id="password-validation" class="validation-message" />

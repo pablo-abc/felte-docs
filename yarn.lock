@@ -825,10 +825,10 @@
   dependencies:
     "@felte/common" "^0.1.4"
 
-"@felte/reporter-dom@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@felte/reporter-dom/-/reporter-dom-0.1.6.tgz#356945721c4cd4eceb2da3e9d2ea8c0fda6741c5"
-  integrity sha512-+Fk3UComgn9akLlzvbUzScE5DjO5LhHuWeDKANHBvk7BdQ8Fr9bRDVduW0tg2vvHPeSnN7QNtQCmcxmakdPF8g==
+"@felte/reporter-dom@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@felte/reporter-dom/-/reporter-dom-0.1.7.tgz#b603f493fe699b8118f0dc55702c72a185260d46"
+  integrity sha512-Kg2Pgri3PXSTMvta4+G11F27x22oFiUFFewSXqJ6H6EIjRdeEvqaD4AGBeyoRUq1RbVbcRv3tNHofcvZKOs1uQ==
   dependencies:
     "@felte/common" "^0.1.4"
 
@@ -842,10 +842,10 @@
     svelte "^3.0.0"
     svelte-preprocess "^4.6.9"
 
-"@felte/reporter-tippy@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@felte/reporter-tippy/-/reporter-tippy-0.1.8.tgz#5e0956859b2cce2448a38167fa4419f5ec1669a7"
-  integrity sha512-rwhTCVoHqOtlNF2+36HU7P7tPWDBw7EcwaOUHD4ODvWKzc68NH1FyJQgsM7d+Phot7Ywzo7+CIUJnp5o9VdgjQ==
+"@felte/reporter-tippy@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@felte/reporter-tippy/-/reporter-tippy-0.1.9.tgz#663d1a05515fdec5bdaf48a25f295a51f62d78bf"
+  integrity sha512-bWE5VuBQfYZh85ib4+8rr7hWb++Z1tDO7GFtB3ID/Xw3kMANS1r1vdNIN9aiYaOfsu6eMBKzKFOV75d6Ux6VaQ==
   dependencies:
     "@felte/common" "^0.1.4"
 
@@ -1238,10 +1238,10 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
-felte@^0.4.6:
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/felte/-/felte-0.4.6.tgz"
-  integrity sha512-rPEVmn09r4FDP3V+YyOwm0LCud9vCvpmL6+FTZcyusPxDHGOyfWET5FcXK37FyJOwqgIZeRzcAXPEFG6IuY/0Q==
+felte@^0.4.9:
+  version "0.4.9"
+  resolved "https://registry.yarnpkg.com/felte/-/felte-0.4.9.tgz#e0da0001d8ebf3aaad17cefd34c848d9fdda6059"
+  integrity sha512-Wmf5Wd67fy1goEEi+fLDyVPUhmaHwTnrMkYk7pzDdsCUEgtIdvFjpNckmbRrVVxL1/ff/EVVWsYz8sJCCHDfzg==
   dependencies:
     "@felte/common" "^0.1.4"
     lodash "^4.17.20"

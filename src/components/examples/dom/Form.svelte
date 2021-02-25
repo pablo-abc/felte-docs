@@ -29,12 +29,12 @@
     <span>Email:</span>
     <input id="email-dom" name="email" type="email" aria-describedby="email-validation-dom">
   </label>
-  <div id="email-validation-dom" data-felte-reporter-dom-for="email-dom" aria-live="polite" />
+  <div id="email-validation-dom" data-felte-reporter-dom-for="email-dom" />
   <label>
     <span>Password:</span>
     <input id="password-dom" name="password" type="password" aria-describedby="password-validation-dom">
   </label>
-  <div id="password-validation-dom" data-felte-reporter-dom-for="password-dom" aria-live="polite" />
+  <div id="password-validation-dom" data-felte-reporter-dom-for="password-dom" />
   <button type="submit">Fail to sign in</button>
 </form>
 
