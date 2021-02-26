@@ -31,6 +31,7 @@ export default async function getDocs({ lang = 'en', version = 'latest' }) {
       'stores',
       'reporters',
       'custom-controls',
+      'accessibility',
     ];
     return Promise.all(sections.map(readMd));
   } catch {
