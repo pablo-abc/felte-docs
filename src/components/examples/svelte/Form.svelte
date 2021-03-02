@@ -41,9 +41,8 @@
   </label>
   <ValidationMessage for="password-svelte" let:messages={message}>
     <span id="password-validation-svelte" class="validation-message" aria-live="polite">
-      {message}
+      {message || ''}
     </span>
-    <span slot="placeholder" id="password-validation-svelte" class="validation-message" />
   </ValidationMessage>
   <button type="submit">Fail to sign in</button>
 </form>

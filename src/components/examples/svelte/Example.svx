@@ -39,6 +39,7 @@
       <span>Email:</span>
       <input id="email" name="email" type="email" aria-describedby="email-validation">
     </label>
+    <!-- You can use a placeholder slot -->
     <ValidationMessage for="email" let:messages={message}>
       <span id="email-validation" class="validation-message" aria-live="polite">
         {message}
@@ -49,11 +50,11 @@
       <span>Password:</span>
       <input id="password" name="password" type="password" aria-describedby="password-validation">
     </label>
+    <!-- Or handle any undefined/falsy message yourself -->
     <ValidationMessage for="password" let:messages={message}>
       <span id="password-validation" class="validation-message" aria-live="polite">
-        {message}
+        {message || ''}
       </span>
-      <span slot="placeholder" id="password-validation" class="validation-message" />
     </ValidationMessage>
     <button type="submit">Fail to sign in</button>
   </form>
