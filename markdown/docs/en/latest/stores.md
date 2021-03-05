@@ -50,3 +50,11 @@ A function that accepts a `string` path for the `touched` store that sets a fiel
 #### setError
 
 A function that accepts a `string` path for the `errors` store that sets an error.
+
+#### validate
+
+A function that forces Felte to validate all inputs, touches all of them and updates the `errors` store.
+
+#### reset
+
+A function that resets all inputs and the `data` store to its original values.
