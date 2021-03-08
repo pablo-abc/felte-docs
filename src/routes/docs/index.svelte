@@ -18,12 +18,13 @@
   import Link from '../../components/renderers/Link.svelte';
   import Head from '../../components/Head.svelte';
 
+  export let data;
+
   const renderers = {
     heading: Heading,
     code: Code,
     link: Link,
   };
-  export let data;
 
   let asideItems = data.map(section => ({
     id: section.attributes.id,

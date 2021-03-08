@@ -58,3 +58,7 @@ A function that forces Felte to validate all inputs, touches all of them and upd
 #### reset
 
 A function that resets all inputs and the `data` store to its original values.
+
+#### createSubmitHandler
+
+A function that creates a submit handler with overriden `onSubmit`, `onError` and/or `validate` functions. If no config is passed it uses the default configuration from `createForm`.
