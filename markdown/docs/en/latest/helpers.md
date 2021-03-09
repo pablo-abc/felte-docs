@@ -23,8 +23,9 @@ Note that in order for this change to be reflected on your form you'll need to a
 <script>
   const { form, setField, data } = createForm(/* ... */);
 
-  // At some moment call the setField function
-  setField('account.email', 'default@email.dev');
+  // At some moment call the setField function.
+  // The `false` argument tells Felte not to touch the field.
+  setField('account.email', 'default@email.dev', false);
 </script>
 
 <form use:form>
@@ -44,11 +45,11 @@ A function that accepts a `string` path for the `errors` store that sets an erro
 
 ### validate
 
-A function that forces Felte to validate all inputs, touches all of them and updates the `errors` store.
+A function that forces Felte to validate all inputs, touches all of them and updates the `errors` store. It has no arguments.
 
 ### reset
 
-A function that resets all inputs and the `data` store to its original values.
+A function that resets all inputs and the `data` store to its original values. It has no arguments.
 
 ### createSubmitHandler
 
