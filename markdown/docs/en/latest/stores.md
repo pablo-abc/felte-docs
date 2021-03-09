@@ -61,4 +61,25 @@ A function that resets all inputs and the `data` store to its original values.
 
 #### createSubmitHandler
 
-A function that creates a submit handler with overriden `onSubmit`, `onError` and/or `validate` functions. If no config is passed it uses the default configuration from `createForm`.
+A function that creates a submit handler with overriden `onSubmit`, `onError` and/or `validate` functions. If nothing is passed as a first arg, or if any of the three accepted properties is undefined, it will use the values from the `createForm` configuration object as a default.
+
+```html
+<script>
+  const { form, createSubmitHandler } = createForm({
+    onSubmit: (values) => console.log('Default onSubmit'),
+  });
+
+  const altOnSubmit = createSubmitHandler({
+    onSubmit: (values) => console.log('Alternative onSubmit'),
+    validate: (values) => /* ... */,
+    onError: (errors) => /* ... */,
+  });
+</script>
+
+<form use:form>
+  <input type="email" name="email">
+  <input type="password" name="password">
+  <button type="submit">Call default submit handler</button>
+  <button type="submit" on:click={altOnSubmit}>Call alternative submit handler</button>
+</form>
+```

@@ -818,6 +818,11 @@
   resolved "https://registry.yarnpkg.com/@felte/common/-/common-0.1.4.tgz"
   integrity sha512-M7Fs37JBadJPMGzdhpWgxUJUoEiW/gfQeEJxjnfsN+KF8pEQgKuW8FST6n5pMD5oMJdVmdEfcNnvwHy6ap2gfA==
 
+"@felte/common@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@felte/common/-/common-0.1.6.tgz#9d69577ca082b71218cbe03a9720ee7b2b0e0658"
+  integrity sha512-anST1oCKvFwxq+UDOeJoZ2m+EKLONIs49ODTCTboU0Z8ROQbyh8cSE4u+0r3IogZ207lHh/cmGK8ZB/YCr9WxA==
+
 "@felte/reporter-cvapi@^0.1.5":
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/@felte/reporter-cvapi/-/reporter-cvapi-0.1.5.tgz"
@@ -1238,12 +1243,12 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
-felte@^0.4.9:
-  version "0.4.9"
-  resolved "https://registry.yarnpkg.com/felte/-/felte-0.4.9.tgz#e0da0001d8ebf3aaad17cefd34c848d9fdda6059"
-  integrity sha512-Wmf5Wd67fy1goEEi+fLDyVPUhmaHwTnrMkYk7pzDdsCUEgtIdvFjpNckmbRrVVxL1/ff/EVVWsYz8sJCCHDfzg==
+felte@^0.4.10:
+  version "0.4.11"
+  resolved "https://registry.yarnpkg.com/felte/-/felte-0.4.11.tgz#038df96484c9764ab8b1fef3b61ee0d970e22d6b"
+  integrity sha512-t4H70a5XZ/6jDvlVC6Bs6FnXoYHCjNwdTKupXS+GuQwqjahZyjtCvKxxz8HL/kSpvGCyrFWhAZYSXgmarJ7eIg==
   dependencies:
-    "@felte/common" "^0.1.4"
+    "@felte/common" "^0.1.6"
     lodash "^4.17.20"
 
 focus-lock@^0.6.2:
