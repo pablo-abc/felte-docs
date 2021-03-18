@@ -30,7 +30,7 @@ You may also want to add Tippy's CSS somewhere in your project.
 import 'tippy.js/dist/tippy.css';
 ```
 
-In order to use it, you'll need to import it in your component and add it to the `reporter` option of `createForm`.
+In order to use it, you'll need to import it in your component and add it to the `extend` option of `createForm`.
 
 ```javascript
 import reporter from '@felte/reporter-tippy';
@@ -38,7 +38,7 @@ import { createForm } from 'felte';
 
 const { form } = createForm({
   // ...
-  reporter,
+  extend: reporter,
   // ...
 });
 ```
@@ -67,7 +67,7 @@ npm i -D @felte/reporter-svelte
 yarn add -D @felte/reporter-svelte
 ```
 
-It exports a `svelteReporter` function and a `ValidationMessage` component. Pass tge `svelteReporter` function to the `reporter` option of `createForm` and add the `ValidationMessage` component wherever you want your validation messages to be displayed.
+It exports a `svelteReporter` function and a `ValidationMessage` component. Pass tge `svelteReporter` function to the `extend` option of `createForm` and add the `ValidationMessage` component wherever you want your validation messages to be displayed.
 
 The `ValidationMessage` component needs a `for` prop set with the **id** of the input it corresponds to, the error messages will be passed to you via the `messages` slot prop. The default slot will be rendered when there are errors, and the `placeholder` slot when there aren't any. The `placeholder` slot is optional and if not used, you'll need to handle any falsy values for `messages` yourself.
 
@@ -78,7 +78,7 @@ The `ValidationMessage` component needs a `for` prop set with the **id** of the 
 
   const { form } = createForm({
       // ...
-      reporter: svelteReporter,
+      extend: svelteReporter,
       // ...
     },
   })
@@ -124,14 +124,14 @@ interface DomReporterOptions {
 - `single` tells the reporter to display only a single message with a `span` element. If false, displays the messages in a list. Default: `false`.
 - `listType` defines the element to be used for the list. Default: `ul`.
 
-Add it to the `reporter` property of Felte's `createForm` configuration object.
+Add it to the `extend` property of Felte's `createForm` configuration object.
 
 ```javascript
 import reporterDom from '@felte/reporter-dom';
 
 const { form } = createForm({
   // ...
-  reporter: reporterDom(),
+  extend: reporterDom(),
   // ...
 });
 ```
@@ -167,7 +167,7 @@ npm i -S @felte/reporter-cvapi
 yarn add @felte/reporter-cvapi
 ```
 
-In order to use it, add it to the `reporter` property of Felte's `createForm` configuration object.
+In order to use it, add it to the `extend` property of Felte's `createForm` configuration object.
 
 ```javascript
 import { createForm } from 'felte';
@@ -175,7 +175,7 @@ import reporter from '@felte/reporter-cvapi';
 
 const { form } = createForm({
   // ...
-  reporter,
+  extend: reporter,
   // ...
 });
 ```

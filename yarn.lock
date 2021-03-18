@@ -813,46 +813,41 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@felte/common@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@felte/common/-/common-0.1.4.tgz"
-  integrity sha512-M7Fs37JBadJPMGzdhpWgxUJUoEiW/gfQeEJxjnfsN+KF8pEQgKuW8FST6n5pMD5oMJdVmdEfcNnvwHy6ap2gfA==
+"@felte/common@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@felte/common/-/common-0.2.0.tgz#2a37ebaf030f0576517712109acefa8c7edaa5f0"
+  integrity sha512-tQ4JjxjhczUzTXn2s7WCRr9O4FrH/QH+I9rL/IMLA6VK9nI3vt8j+Nmy3EJNmZIUsUS6nsvTCqH3Nx+wQhuhnw==
 
-"@felte/common@^0.1.6":
+"@felte/reporter-cvapi@^0.1.6":
   version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@felte/common/-/common-0.1.6.tgz#9d69577ca082b71218cbe03a9720ee7b2b0e0658"
-  integrity sha512-anST1oCKvFwxq+UDOeJoZ2m+EKLONIs49ODTCTboU0Z8ROQbyh8cSE4u+0r3IogZ207lHh/cmGK8ZB/YCr9WxA==
-
-"@felte/reporter-cvapi@^0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@felte/reporter-cvapi/-/reporter-cvapi-0.1.5.tgz"
-  integrity sha512-nH7DlsBHSEOdEp45kpq87vADphjHEf4e5e9EZPvVevuPSCBbCQgj/MXQJQOcM+qPiAwe+XoMn9RKXnOybki69w==
+  resolved "https://registry.yarnpkg.com/@felte/reporter-cvapi/-/reporter-cvapi-0.1.6.tgz#f287ce62d9f0ca940577f29ccdf2e2eb5c0bed0a"
+  integrity sha512-Ikvi86xRZX8lBa9hypy+w2vbqbQ2y3bND11YjBi97C2x1kA9BCXKAjC79/iGFDu2aNKoeadmhCIH+WAO/Xlzdg==
   dependencies:
-    "@felte/common" "^0.1.4"
+    "@felte/common" "^0.2.0"
 
-"@felte/reporter-dom@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@felte/reporter-dom/-/reporter-dom-0.1.7.tgz#b603f493fe699b8118f0dc55702c72a185260d46"
-  integrity sha512-Kg2Pgri3PXSTMvta4+G11F27x22oFiUFFewSXqJ6H6EIjRdeEvqaD4AGBeyoRUq1RbVbcRv3tNHofcvZKOs1uQ==
+"@felte/reporter-dom@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@felte/reporter-dom/-/reporter-dom-0.1.8.tgz#26a946bf1dcc14aa4e6b7fd0329e8ea96d7a684b"
+  integrity sha512-uR8e7e4YmuierIaGSMm804URa+DqoMbObix2Q+FrvFs4+OepbpT3r5Xyxbtx6dAze9eqIdJ5CbutrZb4rmPSxg==
   dependencies:
-    "@felte/common" "^0.1.4"
+    "@felte/common" "^0.2.0"
 
-"@felte/reporter-svelte@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@felte/reporter-svelte/-/reporter-svelte-0.1.9.tgz#19bda0f25c01ba67a8fb73544729049b7d8ea0d9"
-  integrity sha512-SzHkvUK2U7N2RS77WZEDs21Yh6egULTnVzUmrYcxJOt3AB8fYX5z0oXrt3ep1fuTk2HkWCjnefDj0dxtJW0MIg==
+"@felte/reporter-svelte@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@felte/reporter-svelte/-/reporter-svelte-0.1.10.tgz#518d01af775449c7bfebec433f88747e96477b2e"
+  integrity sha512-CuO9Xa2qIFskPycMVZ5nvFI+C5WzJO72Di0obgmZf5+4TVLX/4+heG+06/imp4BfSwOnyLQLBjEAdtPbzrvY0w==
   dependencies:
-    "@felte/common" "^0.1.4"
+    "@felte/common" "^0.2.0"
     rollup-plugin-svelte "^7.1.0"
     svelte "^3.0.0"
     svelte-preprocess "^4.6.9"
 
-"@felte/reporter-tippy@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@felte/reporter-tippy/-/reporter-tippy-0.1.9.tgz#663d1a05515fdec5bdaf48a25f295a51f62d78bf"
-  integrity sha512-bWE5VuBQfYZh85ib4+8rr7hWb++Z1tDO7GFtB3ID/Xw3kMANS1r1vdNIN9aiYaOfsu6eMBKzKFOV75d6Ux6VaQ==
+"@felte/reporter-tippy@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@felte/reporter-tippy/-/reporter-tippy-0.1.10.tgz#4bd89ccc53bb0a5e4a63aaa14bc7f87cdcc2e4a5"
+  integrity sha512-aZ90gwbfxuJF1gCDY7X8IHfffupu5ZApKVwV0++yTJooJAMW8XR3PWfXCSndB21uJ/I9kxmNZiyqUua0JO58IA==
   dependencies:
-    "@felte/common" "^0.1.4"
+    "@felte/common" "^0.2.0"
 
 "@polka/url@^1.0.0-next.11", "@polka/url@^1.0.0-next.9":
   version "1.0.0-next.11"
@@ -1243,12 +1238,12 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
-felte@^0.4.10:
-  version "0.4.11"
-  resolved "https://registry.yarnpkg.com/felte/-/felte-0.4.11.tgz#038df96484c9764ab8b1fef3b61ee0d970e22d6b"
-  integrity sha512-t4H70a5XZ/6jDvlVC6Bs6FnXoYHCjNwdTKupXS+GuQwqjahZyjtCvKxxz8HL/kSpvGCyrFWhAZYSXgmarJ7eIg==
+felte@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/felte/-/felte-0.5.0.tgz#a9d0f9c810a56bcc8872d3c058bfed000379b5fe"
+  integrity sha512-wM5Y8cOI8GBF2oD266ipfbOs12aw3Gt/7JXSc5IwVZ/RuwVR2D1yh0617uKUIpNwc1gubqfLsBRMXmOfIdJL4Q==
   dependencies:
-    "@felte/common" "^0.1.6"
+    "@felte/common" "^0.2.0"
     lodash "^4.17.20"
 
 focus-lock@^0.6.2:

@@ -10,7 +10,7 @@
       };
     },
     onError: error => error,
-    reporter: reporter({ single: true }),
+    extend: reporter({ single: true }),
     validate: (values) => {
       return checkPerKey(
         values,
