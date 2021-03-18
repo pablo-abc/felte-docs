@@ -832,20 +832,20 @@
   dependencies:
     "@felte/common" "^0.2.0"
 
-"@felte/reporter-svelte@^0.1.10":
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/@felte/reporter-svelte/-/reporter-svelte-0.1.10.tgz#518d01af775449c7bfebec433f88747e96477b2e"
-  integrity sha512-CuO9Xa2qIFskPycMVZ5nvFI+C5WzJO72Di0obgmZf5+4TVLX/4+heG+06/imp4BfSwOnyLQLBjEAdtPbzrvY0w==
+"@felte/reporter-svelte@^0.1.11":
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/@felte/reporter-svelte/-/reporter-svelte-0.1.11.tgz#3a2e404a0ea64859e442c1534162aeb78c685176"
+  integrity sha512-X5o2rBAwWcSdaaktXpLzq7ra5cwqxPEFLmMNqqLB50Weab58VMaxo/sGjyi2hyDi3zMxPo1m1Y7JHf3makvYtg==
   dependencies:
     "@felte/common" "^0.2.0"
     rollup-plugin-svelte "^7.1.0"
     svelte "^3.0.0"
     svelte-preprocess "^4.6.9"
 
-"@felte/reporter-tippy@^0.1.10":
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/@felte/reporter-tippy/-/reporter-tippy-0.1.10.tgz#4bd89ccc53bb0a5e4a63aaa14bc7f87cdcc2e4a5"
-  integrity sha512-aZ90gwbfxuJF1gCDY7X8IHfffupu5ZApKVwV0++yTJooJAMW8XR3PWfXCSndB21uJ/I9kxmNZiyqUua0JO58IA==
+"@felte/reporter-tippy@^0.1.11":
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/@felte/reporter-tippy/-/reporter-tippy-0.1.11.tgz#17805715e287b09ee5f0844c0fe4fca2e92e6b6e"
+  integrity sha512-Tii4eHeUTkfJXUxeuh6E1yr1ybP0Le5yp4VtMRSH2XSESGmXxlpF9SPHsp3u3ctbiqXls18XourH7ZFkYRivrA==
   dependencies:
     "@felte/common" "^0.2.0"
 
