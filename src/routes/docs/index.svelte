@@ -16,6 +16,7 @@
   import Code from '../../components/renderers/Code.svelte';
   import DocsAside from '../../components/DocsAside.svelte';
   import Link from '../../components/renderers/Link.svelte';
+  import List from '../../components/renderers/List.svelte';
   import Head from '../../components/Head.svelte';
 
   export let data;
@@ -24,6 +25,7 @@
     heading: Heading,
     code: Code,
     link: Link,
+    list: List,
   };
 
   let asideItems = data.map(section => ({
