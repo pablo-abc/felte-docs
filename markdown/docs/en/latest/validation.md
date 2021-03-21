@@ -14,7 +14,9 @@ const { form } = createForm({
   // ...
   validate: (values) => {
     const errors = {}
-    if (!values.email) errors.email = 'Must be a valid email';
+    if (!values.email || !/^[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/.test(values.email)) {
+      errors.email = 'Must be a valid email';
+    }
     if (!values.password) errors.password = [
       'Must not be empty',
       'Must be over 8 characters',
@@ -28,30 +30,39 @@ const { form } = createForm({
 });
 ```
 
-It shouldn't be a hard task to use a third party library, such as [yup](https://github.com/jquense/yup), with this:
+It shouldn't be a hard task to use a third party library, as long as you transform their result into something that Felte understands.
+
+Note that the `validate` function **can be asynchronous**.
+
+### Validation with Yup
+
+[Yup](https://github.com/jquense/yup) is a really popular validation library. For this reason we've created [`@felte/validator-yup`](https://github.com/pablo-abc/felte/tree/main/packages/validator-yup). An official package to handle validation with Yup. To use it you'll need both `@felte/validator-yup` and `yup`.
+
+```sh
+npm install --save @felte/validator-yup yup
+
+# Or, if you use yarn
+
+yarn add @felte/validator-yup yup
+```
+
+It's usage would look something like:
 
 ```javascript
+import { validateSchema } from '@felte/validator-yup';
 import * as yup from 'yup';
 
-const schema = yup.object().shape({
+const schema = yup.object({
   email: yup.string().email().required(),
   password: yup.string().required(),
 });
 
 const { form } = createForm({
   // ...
-  validate: async (values) => {
-    try {
-      await schema.validate(values);
-    } catch (err) {
-      return err;
-    }
-  },
+  validate: validateSchema(schema),
   // ...
 });
 ```
-
-This is also to show that `validate` can handle async functions as well!
 
 Felte will validate whichever field it considers as `touched` as you fill the form, and it will validate all fields (and set them as `touched`) when submitting it.
 
