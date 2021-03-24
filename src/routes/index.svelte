@@ -7,7 +7,7 @@
   import Head from '../components/Head.svelte';
 </script>
 
-<Head section="Home" />
+<Head section="A form library for Svelte" />
 
 <main>
   <div class=row>
